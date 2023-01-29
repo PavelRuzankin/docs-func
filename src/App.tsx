@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Flex } from 'reflexbox';
 
-function App() {
+import { useDocument } from './hooks/use-document.hook';
+
+import { Settings } from './components/settings/settings.component';
+import { Sheet } from './components/sheet/sheet.component';
+
+import { SheetWrapper } from './common/styled';
+
+const App = () => {
+  const {
+    text,
+    settings,
+    changeText,
+    changeSettings
+  } = useDocument()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Flex>
+      <SheetWrapper>
+        <Sheet 
+          text={text} 
+          settings={settings} 
+          onChange={changeText} 
+        />
+      </SheetWrapper>
+      <Settings 
+        initial={settings} 
+        onSubmit={changeSettings} 
+      />
+    </Flex>
+  )
 }
 
 export default App;

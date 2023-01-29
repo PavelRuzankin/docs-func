@@ -1,5 +1,5 @@
 {
-  "name": "docs-by-pavel-ruzankin",
+  "name": "docs-func",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,9 +10,12 @@
     "@types/node": "^16.18.11",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@types/reflexbox": "^4.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "reflexbox": "^4.0.6",
+    "styled-components": "^5.3.6",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
   },
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26"
   }
 }
